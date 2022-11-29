@@ -1,0 +1,1 @@
+# indimin-front-net-core
