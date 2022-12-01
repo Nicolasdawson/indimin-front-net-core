@@ -10,7 +10,7 @@ Cambiar el appsettings en indimin-net-core\Indimin.EastView con el ConnectionStr
 ```
 ## Que falto
 
-*Desplegarlo en docker.
+*Se agrego docker pero la imagen al no tener sql server no funciona, pero se puede probar la app en con el penultimo push
 
 *Agregar Tests unitarios y tal vez de integracion.
 
