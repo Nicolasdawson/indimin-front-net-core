@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  indimin.eastview.api:
+    image: ${DOCKER_REGISTRY-}indimineastviewapi
+    build:
+      context: .
+      dockerfile: Indimin.EastView\Dockerfile
