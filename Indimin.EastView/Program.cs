@@ -21,7 +21,6 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 var app = builder.Build();
 
-
 using (var scope = app.Services.CreateScope())
 {
     var dataContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -36,6 +35,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true)
+    .AllowCredentials());
 
 app.UseAuthorization();
 
